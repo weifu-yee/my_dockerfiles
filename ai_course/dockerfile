@@ -1,0 +1,27 @@
+FROM ubuntu:20.04
+
+RUN apt-get update
+RUN apt update
+
+
+# RUN sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl
+
+# RUN pip install numpy
+# RUN pip install pycryptodome
+# RUN pip install cython
+# RUN sudo apt-get install -y python3-dev
+# RUN pip install sympy
+# RUN pip install certifi
+# RUN pip install casadi
+# RUN pip install cffi
+# RUN pip install setproctitle
+# RUN pip install pycapnp
+# RUN sudo apt-get install libcurl4-openssl-dev
+# RUN pip install smbus2
+# RUN pip install hatanaka pyzmq
+# RUN pip install hatanaka pycurl
+# RUN pip install atomicwrites
+# RUN 
+# RUN 
+# RUN 
+# RUN 

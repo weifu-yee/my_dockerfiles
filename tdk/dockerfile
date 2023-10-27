@@ -1,0 +1,25 @@
+FROM osrf/ros:noetic-desktop
+
+RUN apt-get update
+
+# RUN apt-get update && \
+#     apt-get install -y nvidia-driver-535.113.01 libnvidia-ml1 && \
+#     rm -rf /var/lib/apt/lists/*
+
+RUN apt-get install -y git
+RUN git config --global user.name "weifu-yee"
+RUN git config --global user.email "chenweifu9999@gmail.com"
+
+RUN apt-get install -y python3-pip
+RUN sudo apt install libopencv-dev python3-opencv
+
+RUN sudo apt-get install ros-noetic-rosserial-msgs
+
+RUN echo "source /opt/ros/noetic/setup.bash" >> /root/.bashrc
+RUN echo "source /root/tdk_ws/devel/setup.bash" >> /root/.bashrc
+
+RUN mkdir -p ~/tdk_ws/src
+
+RUN /bin/bash -c '. /opt/ros/noetic/setup.bash; cd ~/tdk_ws; catkin_make'
+
+RUN echo "ALL DONE !"
